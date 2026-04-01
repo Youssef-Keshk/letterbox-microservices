@@ -13,12 +13,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class MovieInfoServiceApplication {
 
-    private final int TIMEOUT = 3000;   // 3 seconds
+    private final int TIMEOUT = 5000;   // 5 seconds
 
     @Bean
     public RestTemplate getRestTemplate() {
         HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
-        clientHttpRequestFactory.setConnectTimeout(TIMEOUT);   // Set the timeout to 3 seconds
+        clientHttpRequestFactory.setConnectTimeout(TIMEOUT);   // Set the timeout to 5 seconds
         return new RestTemplate();
     }
 

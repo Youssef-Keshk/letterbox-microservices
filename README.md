@@ -1,3 +1,10 @@
+## Changes to original repository
+1. Changing the ratings service storage data model from the default in-memory to MySQL.
+2. Caching the MovieDB query results in MongoDB.
+3. Creating a new Trending Movies Service with gRPC API.
+4. Runing JMeter Tests
+------------------------------------------------------------------------------------------------------------------
+
 # spring-boot-microservices
 In this project, multiple microservices communicate with each other to provide the backend services of a minimalistic/sample movie rating application similar to IMDB.
 

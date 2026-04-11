@@ -42,4 +42,13 @@ public class MovieInfoService {
     public CatalogItem getFallbackCatalogItem(Rating rating) {
         return new CatalogItem("Movie name not found", "", rating.getRating());
     }
+
+    public Movie getMovieInfo(String movieId) {
+        String movieDetailsUrl = "http://movie-info-service/movies/" + movieId;
+        return this.restTemplate.getForObject(movieDetailsUrl, Movie.class);
+    }
+
+    public Movie getFallbackMovieInfo(String movieId) {
+        return new Movie(movieId, "Movie Not Found", "The movie info service is currently unavailable.");
+    }
 }

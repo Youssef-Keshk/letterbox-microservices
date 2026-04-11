@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_package = "com.example.trendingmoviesservice.grpc";
+option java_outer_classname = "TrendingMoviesProto";
+option java_multiple_files = true;
+
+service TrendingService {
+  rpc GetTrendingMovies (TrendingRequest) returns (TrendingResponse);
+}
+
+// Request
+message TrendingRequest {
+  optional int32 limit = 1;
+}
+
+// Response
+message TrendingResponse {
+  repeated MovieScore movies = 1;
+}
+
+message MovieScore {
+  string movieId = 1;
+  double averageScore = 2;
+}

@@ -1,8 +1,14 @@
 package com.example.movieinfoservice.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "movies_cache")
 public class Movie {
 
+    @Id
     private String movieId;
+
     private String name;
     private String description;
 
@@ -18,7 +24,6 @@ public class Movie {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
@@ -26,7 +31,6 @@ public class Movie {
     public String getMovieId() {
         return movieId;
     }
-
     public void setMovieId(String movieId) {
         this.movieId = movieId;
     }
@@ -34,7 +38,6 @@ public class Movie {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

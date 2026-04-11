@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "_id",
+    "_class",
+    "description",
+    "name"
+  ],
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "_class": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "$defs": {}
+}
